@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.cpu
-    command: ["python", "process.py"]
     volumes:
       - ./.assets:/facefusion/.assets
       - ./.caches:/facefusion/.caches
