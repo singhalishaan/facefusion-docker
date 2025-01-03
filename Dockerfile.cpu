@@ -22,8 +22,5 @@ RUN pip install requests cloudinary
 # Install FaceFusion dependencies
 RUN python install.py --onnxruntime default --skip-conda
 
-# Ensure 'process.py' is copied to the container
-COPY process.py .
-
 # Default command to run the process.py script
 CMD ["python", "process.py"]
