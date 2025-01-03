@@ -20,7 +20,7 @@ RUN apt-get update && \
 # Install Python dependencies
 RUN pip install requests cloudinary
 
-RUN git clone https://github.com/singhalishaan/facefusion-docker.git --branch ${FACEFUSION_VERSION} --single-branch . && \
+RUN git clone https://github.com/singhalishaan/facefusion-docker.git . && \
     python install.py --onnxruntime cuda --skip-conda
 
 # Add the process.py script
